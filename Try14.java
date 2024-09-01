@@ -3,6 +3,9 @@ public class Try14 {
         Baby2 b2 = new Baby2();
         b2.servings = 100;
         b2.feed(b2.servings);
+        System.out.println("");
+        System.out.println(b2.servings);
+        System.out.println("");
         b2.poop();
         System.out.println("shot");
         System.out.println(b2.servings);

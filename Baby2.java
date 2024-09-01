@@ -1,8 +1,8 @@
 public class Baby2 {
     int servings;
     void feed(int servings){
-        servings = servings + servings;
-        System.out.println(servings);
+        this.servings = this.servings + this.servings;
+        System.out.println(this.servings);
         System.out.println("");
     }
     void poop(){
