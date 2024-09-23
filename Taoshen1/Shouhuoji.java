@@ -34,19 +34,20 @@ public class Shouhuoji {
             int insertedCoinValue = 0;
             int tempInsertedValue = 0;
             Scanner sc1 = new Scanner(System.in);
-            for (int i = 0; i >= a.getPrice(); i++) {
+            for (int i = 0; i <= a.getPrice(); i++) {
                 System.out.println("投入硬币(输入整数1、2或5):");
                 tempInsertedValue = sc1.nextInt();
                 if (tempInsertedValue != 1 && tempInsertedValue != 2 && tempInsertedValue != 5) {
                     System.err.println("不能投入除了1,2,5以外的其它面值.请重新投币");
                     System.err.println("上次投币币值:" + tempInsertedValue + "," + "已投入币值:" + insertedCoinValue);
                 } else {
-
+                    insertedCoinValue +=tempInsertedValue;
                     if (insertedCoinValue >= a.getPrice()) {
                         System.out.println("投币完成.货物已经购买");
                         returnCoin = insertedCoinValue - a.getPrice();
                         System.out.println("找零:" + returnCoin);
                         this.huowuList[x][0] = null;
+                        return 0 ;
                     } else {
                         continue;
                     }
